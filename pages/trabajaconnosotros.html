@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!--animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Bootstrap-(CDN)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../Imagenes/Logo-cafe.jpg">
+    <title>Trabaja con nosotros</title>
+</head>
+<body id="body-trabaja">
+    
+    <header id="header">
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../Imagenes/logo-cafeto.png" alt="logo" class="logo-header"> </a>  
+                <h1 class="animate__animated animate__rubberBand">¡De la mas alta calidad!</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="produccion.html">Produccion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="trabajaconnosotros.html">Convocatoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Preparacion.html">Preparaciones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <hr>
+        <h2 class="animate__animated animate__pulse">Se parte de nuestro equipo de trabajo:</h2>
+        <hr>
+        <h3>Unete a esta gran familia diligenciando el siguiente formulario:</h3>
+    
+        <section>
+            <form id="form">
+                <fieldset>
+                    <legend><h4>Informacion personal:</h4></legend>
+
+                    <div>
+                        <label for="nombre">Nombres:</label>
+                        <input type="text" id="nombre" placeholder="Nombres" required>
+                    </div>
+
+                    <div>
+                        <label for="apellido">Apellidos:</label>
+                        <input type="text" id="apellido" placeholder="Apellidos">
+                    </div>
+
+                    <div>
+                        <label for="numero">Numero de contacto:</label>
+                        <input type="tel" id="numero" placeholder="Ingresa tu numero" required>
+                    </div>
+
+                    <div>
+                        <label for="correo">Correo electronico:</label>
+                        <input type="email" id="correo" placeholder="Ingresa una direccion" required>
+                    </div>
+
+                    <div>
+                        <label for="residencia">Ciudad de residencia:</label>
+                        <input type="text" id="residencia" placeholder="Ciudad de residencia">
+                    </div>
+
+                    <div>
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+
+                    <div>
+                        <label for="experiencia">Experiencia laboral:</label>
+                        <input type="text" id="experiencia" placeholder="Experiencia laboral" required>
+                    </div>
+        
+                    <div>
+                        <p>Sexo:</p>
+
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="tipo" id="masculino" required>
+
+                        <label for="Femenino">Femenino</label>
+                        <input type="radio" name="tipo" id="Femenino" required>
+                    </div>
+        
+                    <div>
+                        <label for="Estado">Estado civil:</label>
+                        <select id="Estado">
+                            <option>Selecciona una opcion</option>
+                            <option>Soltero(@)</option>
+                            <option>casado(@)</option>
+                            <option>Viudo(@)</option>
+                            <option>Divorciado(@)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p>Hablanos de ti:</p>
+                        <textarea cols="30" rows="10"></textarea>
+                    </div>
+
+                    <input type="submit" value="Enviar" class="input-enviar">
+
+                </fieldset>
+            </form>
+        </section>
+    </main>       
+        
+
+    <footer id="footer">
+        <img src="../Imagenes/logo-cafeto.png" alt="Logo" class="logo">
+        <p class="sitio-footer">Sitio desarrollado en el curso de desarrollo web en Coderhouse.</p>
+        <p>Contacto a nivel nacional: 010000 000000  (Colombia)</p>
+        <p>Tratamiento de datos personales</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <!--script-de-bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
