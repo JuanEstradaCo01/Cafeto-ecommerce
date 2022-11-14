@@ -237,7 +237,9 @@ h2 {
 }
 
 h3 {
-    margin: 10rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     font-style: oblique;
     font-size: 1.5rem;
     text-align: center;
@@ -247,7 +249,7 @@ h4 {
     margin-bottom: 1.5rem;
     font-style: oblique;
     font-size: 1.5rem;
-    display: flex;
+    text-align: center;
 }
 
 /*keyframe inicio*/
@@ -310,12 +312,13 @@ h4 {
     font-style: oblique;
     font-size: 1.55rem;
     font-weight: bolder;
-    margin: 0rem 10rem 0rem 10rem;
+    margin: auto 4rem;
 }
 
 .proceso ul{
     list-style-type: circle;
-    margin: 0rem 10rem 0rem 10rem;
+    margin: auto 4rem;
+    text-align: center;
     color: rgb(75, 2, 2);
     font-style: oblique;
     font-size: 1.55rem;
@@ -342,14 +345,17 @@ h4 {
     font-size: 1.7rem;
     margin-bottom: 5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    text-align: center;
+    margin: auto;
 }
 
 fieldset {
+    display: flex;
+    flex-direction: column;
     background-color: brown;
-    padding: 1rem 20rem 1rem 20rem;
+    margin-bottom: 5rem;
+    width: 100%;
 }
 
 table {
@@ -376,6 +382,14 @@ input {
     font-size: 1.2rem;
 }
 
+.input-enviar {
+    font-size: 1.3rem;
+    color: brown;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
 strong {
     font-size: 2rem;
 }
@@ -389,24 +403,21 @@ button {
     font-size: 1.5rem;
     border-radius: 0.8rem;
     background-color: rgb(31, 30, 30);
+    margin: auto;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
 }
 
 button:hover {
-    transform: scale(1.2);
-}
-
-.input-enviar {
-    font-size: 1.3rem;
-    color: brown;
+    transform: scale(1.09);
 }
 
 a {
     text-decoration: none;
     color: rgb(207, 154, 154);
-}
-
-.div-sobre-nosotros p{
-    padding: 1rem;
 }
 
 ul {
@@ -420,11 +431,6 @@ p  {
     font-size: 1.55rem;
     font-weight: bolder;
     color: rgb(75, 2, 2);
-}
-
-td {
-    text-align: 50%;
-    font-size: 1.5rem;
 }
 
 img { 
@@ -441,13 +447,13 @@ img:hover {
 }
 
 ol {
-    text-align: center;
+    margin: auto;
     font-size: 1.5rem;
 }
 
 th {
     font-size: 2rem;
-    width: 100%;
+    text-align: center;
 }
 
 
