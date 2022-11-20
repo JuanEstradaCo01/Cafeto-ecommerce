@@ -1,0 +1,30 @@
+
+header{
+    grid-area: header;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: $fondo-header;
+    margin-bottom: 5rem;
+}
+
+header li:hover{
+    transform: scale(1.03);
+}
+
+.navbar-collapse{
+    justify-content: end;
+}
+
+.navbar-collapse a{
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: white;
+}
+
+.logo-header{
+    height: auto;
+    width: auto;
+}
+
+.logo:hover {
+    transform: scale(1.010);
+}

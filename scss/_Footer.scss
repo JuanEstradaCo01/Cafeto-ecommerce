@@ -1,0 +1,24 @@
+#footer {
+    grid-area: footer;
+    background-color: $fondo-footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer p{
+    color: white;
+    font-size: $fuente-p-footer;
+}
+
+@media screen and (max-width:1540px){
+    #footer {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    height: 10rem;
+    width: 9rem;
+    margin: 0;
+}

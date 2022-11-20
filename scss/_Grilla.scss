@@ -1,0 +1,18 @@
+/*reset-css*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*Metodo desktop first*/
+/*inicio grilla*/
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "carrusel carrusel carrusel"
+    "footer footer footer";
+    grid-template-columns: repeat(3,1fr);
+}
