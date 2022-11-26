@@ -13,7 +13,7 @@
     h5 {
         color: rgb(63, 2, 2);
         font-family: cursive;
-        font-size: 3rem;
+        font-size: 5rem;
     }
 }
 
@@ -23,17 +23,44 @@
     grid-template-columns: 1fr 1fr;
 }
 
+@media screen and(max-width: 1250px){
+    #main-index{
+        grid-area: main2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+@media screen and(max-width: 800px){
+    #main-index{
+        grid-area: main2;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+}
+
+
 .div-contenedor {
-    background-image: radial-gradient(brown, beige);
+    background-color: beige;
     border-radius: 2.5rem;
+    margin: 1rem;
     img {
         width: 30rem;
         display: flex;
     }
     h3{
         font-size: 1.75rem;
+        border-radius: 2rem;
         color: rgb(165, 20, 20);
         margin: 2rem 0rem;
+    }
+    p {
+        padding: 1rem;
+    }
+    button{
+        display: flex;
     }
 }
 
@@ -45,7 +72,7 @@
     background-image: radial-gradient(beige, brown);
     width: auto;
     margin-left: 2rem;
-    .contenedor-aside1 {     
+    .contenedor-aside1{     
         display: flex;
         justify-content: center;
     }
@@ -53,28 +80,51 @@
     .contenedor-aside2{
         display: flex;
         justify-content: center;
+        flex-direction: column;
     }
 
+    .contenedor-aside3{
+        display: flex;
+        justify-content: center;
+    }
+    
     h2 {
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bolder;
-        color: red;
-        margin-top: 3rem;
-        text-align: center;
+        font-family: 'Anton', sans-serif;
+        color: rgb(65, 12, 12);
+        font-size: $fuente-h2;
+        display: flex;
+    }
+    h3{
+        font-style: oblique;
+        font-size: $fuente-h3;
+        color: rgb(163, 1, 1);
     }
 
-    img:hover {
+    img:hover{
         transform: none;
     }
 
-    h5 {
+    h5{
         font-size: 1.5rem;
         text-align: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: rgb(243, 239, 239);
         background-image: radial-gradient(brown,rgb(255, 0, 0));
     }
+    p{
+        padding: 1rem;
+    }
 
+}
+
+@media screen and(max-width: 1250px){
+    .section-aside{
+        grid-area: aside2;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin: 2rem;
+    }
 }
 
 #carrusel {

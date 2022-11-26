@@ -8,10 +8,48 @@
 /*inicio grilla*/
 #grilla {
   display: grid;
-  grid-template-areas: "header header header" "publicidad publicidad publicidad" "main main aside" "carrusel carrusel carrusel" "footer footer footer";
+  grid-template-areas: "header header header" "publicidad publicidad publicidad" "main main aside" "main2 main2 main2" "aside2 aside2 aside2" "carrusel carrusel carrusel" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 2rem;
   column-gap: 2rem; }
+
+/*keyframe inicio*/
+.promocion-1 {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5rem;
+  border: dashed red;
+  animation: promocion-1 1s infinite; }
+
+.promocion-2 {
+  width: 99%;
+  height: 99%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: red;
+  animation: promocion-2 1s linear; }
+
+@keyframes promocion-1 {
+  0% {
+    width: 19rem; }
+  50% {
+    width: 21rem; }
+  100% {
+    width: 19rem; } }
+
+@keyframes promocion-2 {
+  0% {
+    width: 99%; }
+  100% {
+    width: 100%; } }
 
 header {
   grid-area: header;
@@ -49,23 +87,43 @@ header li:hover {
   .section-publicidad h5 {
     color: #3f0202;
     font-family: cursive;
-    font-size: 3rem; }
+    font-size: 5rem; }
 
 #main-index {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 1fr; }
 
+@media screen and (max-width: 1250px) {
+  #main-index {
+    grid-area: main2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; } }
+
+@media screen and (max-width: 800px) {
+  #main-index {
+    grid-area: main2;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center; } }
+
 .div-contenedor {
-  background-image: radial-gradient(brown, beige);
-  border-radius: 2.5rem; }
+  background-color: beige;
+  border-radius: 2.5rem;
+  margin: 1rem; }
   .div-contenedor img {
     width: 30rem;
     display: flex; }
   .div-contenedor h3 {
     font-size: 1.75rem;
+    border-radius: 2rem;
     color: #a51414;
     margin: 2rem 0rem; }
+  .div-contenedor p {
+    padding: 1rem; }
+  .div-contenedor button {
+    display: flex; }
 
 .section-aside {
   grid-area: aside;
@@ -80,13 +138,20 @@ header li:hover {
     justify-content: center; }
   .section-aside .contenedor-aside2 {
     display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  .section-aside .contenedor-aside3 {
+    display: flex;
     justify-content: center; }
   .section-aside h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    color: red;
-    margin-top: 3rem;
-    text-align: center; }
+    font-family: 'Anton', sans-serif;
+    color: #410c0c;
+    font-size: 2.5rem;
+    display: flex; }
+  .section-aside h3 {
+    font-style: oblique;
+    font-size: 1.5rem;
+    color: #a30101; }
   .section-aside img:hover {
     transform: none; }
   .section-aside h5 {
@@ -95,6 +160,16 @@ header li:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #f3efef;
     background-image: radial-gradient(brown, red); }
+  .section-aside p {
+    padding: 1rem; }
+
+@media screen and (max-width: 1250px) {
+  .section-aside {
+    grid-area: aside2;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 2rem; } }
 
 #carrusel {
   grid-area: carrusel;
@@ -333,44 +408,6 @@ ol {
 th {
   font-size: 2rem;
   text-align: center; }
-
-/*keyframe inicio*/
-.promocion-1 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-top: 5rem;
-  border: dashed red;
-  animation: promocion-1 1s infinite; }
-
-.promocion-2 {
-  width: 99%;
-  height: 99%;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 2rem;
-  color: red;
-  animation: promocion-2 1s linear; }
-
-@keyframes promocion-1 {
-  0% {
-    width: 19rem; }
-  50% {
-    width: 21rem; }
-  100% {
-    width: 19rem; } }
-
-@keyframes promocion-2 {
-  0% {
-    width: 99%; }
-  100% {
-    width: 100%; } }
 
 #footer {
   grid-area: footer;
