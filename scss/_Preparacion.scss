@@ -25,17 +25,17 @@
     }
 }
 
-@media screen and (max-width:1625px){
-    .sect-padre-preparaciones {
+@media screen and(max-width: 1100px){
+    .sect-padre-preparaciones{
         grid-template-columns: 1fr 1fr;
-        justify-items: center;
+        align-items: center;
     }
 }
 
-@media screen and (max-width:1160px){
-    .sect-padre-preparaciones {
+@media screen and(max-width: 800px){
+    .sect-padre-preparaciones{
         grid-template-columns: 1fr;
-        justify-items: center;
+        align-items: center;
     }
 }
 
