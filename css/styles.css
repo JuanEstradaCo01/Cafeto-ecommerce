@@ -48,6 +48,10 @@ label {
   display: flex;
   flex-direction: column; }
 
+button {
+  display: flex;
+  margin: auto; }
+
 button:hover {
   transform: scale(1.09); }
 
