@@ -1,0 +1,22 @@
+#bg-enlaces-secundarios{
+    background-image: linear-gradient(to right,rgb(22, 76, 78),rgb(1, 47, 65));
+}
+
+.body-enlaces-secundarios{
+    h3{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgb(238, 59, 59);
+    }
+    p{
+        margin: 5rem;
+        color: white;
+    }
+    img{
+        display: block;
+    }
+    button{
+        display: flex;
+    }
+}

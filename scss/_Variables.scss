@@ -11,9 +11,14 @@ $fondo-header: #550202;
 $fondo-footer: #550202;
 $fondo-principal: url(../Imagenes/fondo-3.jpg);
 $fondo-produccion: radial-gradient(white, #e25e05);
-$fondo-convocatoria: url(../Imagenes/fondo-2.jpg);
 $fondo-preparacion: radial-gradient(rgb(206, 198, 198), rgb(87, 9, 9));
-$fondo-cards: url(../Imagenes/fondo-2.jpg);
 $color-textos: #000;
 
+/*Mixin*/
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 

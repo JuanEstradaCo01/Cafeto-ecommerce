@@ -1,0 +1,36 @@
+.proceso {
+    margin-top: 7rem;
+    width: auto;
+    p {
+        font-style: oblique;
+        font-size: $fuente-p;
+        font-weight: bolder;
+        margin: auto 4rem;
+    }
+    ul {
+        list-style-type: circle;
+        margin: auto 4rem;
+        text-align: center;
+        color: $color-textos;
+        font-style: oblique;
+        font-size: 1.55rem;
+        font-weight: bold;
+    }
+    img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+.sect-iframe {
+    @include flex-column-center;
+    border: solid 1rem;
+    border-color: rgb(129, 4, 4);
+}
+
+iframe{
+    width: 30rem;
+}

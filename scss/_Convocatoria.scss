@@ -1,0 +1,29 @@
+#form {
+    font-size: 1.7rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+.input-enviar {
+    font-size: 1.3rem;
+    background-color: red;
+    color: white;
+    border-color: red;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

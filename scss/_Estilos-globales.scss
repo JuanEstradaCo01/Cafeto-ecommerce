@@ -1,0 +1,98 @@
+body {
+    background-image: $fondo-principal;
+}
+
+#body-preparacion {
+    background-image: $fondo-preparacion;
+}
+
+#body-produccion {
+    background-image: $fondo-produccion;
+}
+
+h1 {
+    font-family: 'Freehand', cursive;
+    color: white;
+    font-size: $fuente-h1;
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    color: rgb(65, 12, 12);
+    font-size: $fuente-h2;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+h3 {
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    font-style: oblique;
+    font-size: $fuente-h3;
+    text-align: center;
+    color: $color-textos;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+    font-style: oblique;
+    font-size: $fuente-h4;
+    text-align: center;
+}
+
+input:focus {
+    width: 16rem;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+button:hover {
+    transform: scale(1.09);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(207, 154, 154);
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+p  {
+    font-style: oblique;
+    font-size: $fuente-p;
+    font-weight: bolder;
+    color: $color-textos;
+}
+
+img { 
+    width: 40rem;
+    height: auto;
+    max-width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 2rem;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+ol {
+    margin: auto;
+    font-size: 1.5rem;
+}
