@@ -268,31 +268,58 @@ header li:hover {
   #carrusel img:hover {
     transform: none; }
 
+#body-trabaja {
+  background-image: radial-gradient(beige, #887272); }
+
 #form {
   font-size: 1.7rem;
-  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: auto; }
+  margin: 4rem; }
 
 fieldset {
   display: flex;
-  flex-direction: column;
-  background-color: brown;
+  flex-direction: row;
+  background-color: #23aca5;
   margin-bottom: 5rem;
+  border-radius: 2rem;
   width: 100%; }
+  fieldset img {
+    margin: 5rem 0rem 0rem 3rem;
+    width: 30rem;
+    height: 30rem; }
+    fieldset img:hover {
+      transform: none; }
 
-.input-enviar {
-  font-size: 1.3rem;
-  background-color: red;
-  color: white;
-  border-color: red;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 2rem; }
-  .input-enviar:hover {
-    transform: scale(1.1); }
+@media screen and (max-width: 1000px) {
+  fieldset {
+    display: flex;
+    flex-direction: column; }
+    fieldset img {
+      margin: auto;
+      margin-top: 2rem;
+      margin-bottom: 0rem;
+      width: 20rem;
+      height: 20rem; } }
+
+input {
+  background-image: linear-gradient(to top, #9d9dee, white); }
+
+.contenedor-labels-inputs {
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+  flex-direction: column; }
+
+.contenedor-radios {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .contenedor-radios input {
+    margin: 1rem 1rem; }
+    .contenedor-radios input:focus {
+      width: 1rem; }
 
 .sect-padre-tienda {
   margin: 5rem;

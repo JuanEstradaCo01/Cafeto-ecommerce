@@ -63,70 +63,73 @@
         <section>
             <form id="form">
                 <fieldset>
-                    <h4>Informacion personal:</h4>
-
-                    <div class="contenedor-label-input">
-                        <label for="nombre">Nombres:</label>
-                        <input type="text" id="nombre" placeholder="Nombres" required>
-                    </div>
-
-                    <div>
-                        <label for="apellido">Apellidos:</label>
-                        <input type="text" id="apellido" placeholder="Apellidos">
-                    </div>
-
-                    <div>
-                        <label for="numero">Numero de contacto:</label>
-                        <input type="tel" id="numero" placeholder="Ingresa tu numero" required>
-                    </div>
-
-                    <div>
-                        <label for="correo">Correo electronico:</label>
-                        <input type="email" id="correo" placeholder="Ingresa una direccion" required>
-                    </div>
-
-                    <div>
-                        <label for="residencia">Ciudad de residencia:</label>
-                        <input type="text" id="residencia" placeholder="Ciudad de residencia">
-                    </div>
-
-                    <div>
-                        <label for="fecha">Fecha de nacimiento</label>
-                        <input type="date" id="fecha" required>
-                    </div>
-
-                    <div>
-                        <label for="experiencia">Experiencia laboral:</label>
-                        <input type="text" id="experiencia" placeholder="Experiencia laboral" required>
-                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_960_720.png" alt="usuario">
+                    <div class="contenedor-labels-inputs">
+                        <div class="contenedor-label-input">
+                            <label for="nombre">Nombres:</label>
+                            <input type="text" id="nombre" placeholder="Nombres" required>
+                        </div>
+    
+                        <div>
+                            <label for="apellido">Apellidos:</label>
+                            <input type="text" id="apellido" placeholder="Apellidos">
+                        </div>
+    
+                        <div>
+                            <label for="numero">Numero de contacto:</label>
+                            <input type="tel" id="numero" placeholder="Ingresa tu numero" required>
+                        </div>
+    
+                        <div>
+                            <label for="correo">Correo electronico:</label>
+                            <input type="email" id="correo" placeholder="Ingresa una direccion" required>
+                        </div>
+    
+                        <div>
+                            <label for="residencia">Ciudad de residencia:</label>
+                            <input type="text" id="residencia" placeholder="Ciudad de residencia">
+                        </div>
+    
+                        <div>
+                            <label for="fecha">Fecha de nacimiento</label>
+                            <input type="date" id="fecha" required>
+                        </div>
+    
+                        <div>
+                            <label for="experiencia">Experiencia laboral:</label>
+                            <input type="text" id="experiencia" placeholder="Experiencia laboral" required>
+                        </div>
+            
+                        <div>
+                            <p>Sexo:</p>
+    
+                            <div class="contenedor-radios">
+                                <label for="masculino">Masculino</label>
+                                <input type="radio" name="tipo" id="masculino" required>
         
-                    <div>
-                        <p>Sexo:</p>
+                                <label for="Femenino">Femenino</label>
+                                <input type="radio" name="tipo" id="Femenino" required>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label for="Estado">Estado civil:</label>
+                            <select id="Estado">
+                                <option>Selecciona una opcion</option>
+                                <option>Soltero(@)</option>
+                                <option>casado(@)</option>
+                                <option>Viudo(@)</option>
+                                <option>Divorciado(@)</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <p>Hablanos de ti:</p>
+                            <textarea cols="20" rows="5" maxlength="250"></textarea>
+                        </div>
 
-                        <label for="masculino">Masculino</label>
-                        <input type="radio" name="tipo" id="masculino" required>
-
-                        <label for="Femenino">Femenino</label>
-                        <input type="radio" name="tipo" id="Femenino" required>
+                        <button type="button" class="btn btn-primary mb-5">Enviar</button>
                     </div>
-        
-                    <div>
-                        <label for="Estado">Estado civil:</label>
-                        <select id="Estado">
-                            <option>Selecciona una opcion</option>
-                            <option>Soltero(@)</option>
-                            <option>casado(@)</option>
-                            <option>Viudo(@)</option>
-                            <option>Divorciado(@)</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <p>Hablanos de ti:</p>
-                        <textarea cols="25" rows="10" maxlength="250"></textarea>
-                    </div>
-
-                    <input type="submit" value="Enviar" class="input-enviar">
 
                 </fieldset>
             </form>

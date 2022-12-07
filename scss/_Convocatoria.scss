@@ -1,29 +1,66 @@
+#body-trabaja{
+    background-image: radial-gradient(beige,rgb(136, 114, 114));
+}
+
 #form {
     font-size: 1.7rem;
-    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: auto;
+    margin: 4rem;
 }
 
 fieldset {
     display: flex;
-    flex-direction: column;
-    background-color: brown;
+    flex-direction: row;
+    background-color: rgb(35, 172, 165);
     margin-bottom: 5rem;
+    border-radius: 2rem;
     width: 100%;
-}
-
-.input-enviar {
-    font-size: 1.3rem;
-    background-color: red;
-    color: white;
-    border-color: red;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 2rem;
-    &:hover{
-        transform: scale(1.1);
+    img{
+        margin: 5rem 0rem 0rem 3rem;
+        width: 30rem;
+        height: 30rem;
+        &:hover{
+            transform: none;
+        }
     }
 }
+
+@media screen and(max-width: 1000px){
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        img{
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 0rem;
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+}
+
+input{
+    background-image: linear-gradient(to top,rgb(157, 157, 238),white);
+}
+
+.contenedor-labels-inputs{
+    display: flex;
+    width: 100%;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+
+.contenedor-radios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input{
+        margin: 1rem 1rem;
+        &:focus{
+            width: 1rem;
+        }
+    }
+}
+
