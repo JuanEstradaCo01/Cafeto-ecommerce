@@ -1,3 +1,7 @@
+#body-produccion {
+    background-image: $fondo-produccion;
+}
+
 .proceso {
     margin-top: 7rem;
     width: auto;
@@ -25,12 +29,6 @@
     }
 }
 
-.sect-iframe {
-    @include flex-column-center;
-    border: solid 1rem;
-    border-color: rgb(129, 4, 4);
-}
-
-iframe{
-    width: 30rem;
+.div-video a{
+    color: blue;
 }

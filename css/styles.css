@@ -2,12 +2,6 @@
 body {
   background-image: url(../Imagenes/fondo-3.jpg); }
 
-#body-preparacion {
-  background-image: radial-gradient(#cec6c6, #570909); }
-
-#body-produccion {
-  background-image: radial-gradient(white, #e25e05); }
-
 h1 {
   font-family: 'Freehand', cursive;
   color: white;
@@ -65,6 +59,7 @@ ul {
   padding: 1rem; }
 
 p {
+  text-align: center;
   font-style: oblique;
   font-size: 1.55rem;
   font-weight: bolder;
@@ -84,6 +79,12 @@ img:hover {
 ol {
   margin: auto;
   font-size: 1.5rem; }
+
+.boton-whatsapp {
+  position: fixed;
+  top: 90%;
+  left: 95%;
+  width: 4.5rem; }
 
 /*reset-css*/
 * {
@@ -276,7 +277,7 @@ header li:hover {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 4rem; }
+  margin: 2rem; }
 
 fieldset {
   display: flex;
@@ -383,6 +384,9 @@ input {
   color: white;
   background-color: brown; }
 
+#body-produccion {
+  background-image: radial-gradient(white, #e25e05); }
+
 .proceso {
   margin-top: 7rem;
   width: auto; }
@@ -406,15 +410,11 @@ input {
     justify-content: center;
     margin-top: 3rem; }
 
-.sect-iframe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 1rem;
-  border-color: #810404; }
+.div-video a {
+  color: blue; }
 
-iframe {
-  width: 30rem; }
+#body-preparacion {
+  background-image: radial-gradient(#cec6c6, #570909); }
 
 .sect-padre-preparaciones {
   margin-top: 10rem;
@@ -494,7 +494,7 @@ th {
   color: white;
   font-size: 1rem; }
 
-@media screen and (max-width: 1540px) {
+@media screen and (max-width: 1100px) {
   #footer {
     flex-direction: column; } }
 
@@ -502,3 +502,24 @@ th {
   height: 10rem;
   width: 9rem;
   margin: 0; }
+
+.contenedor-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contenedor-redes ul li {
+  display: inline-block;
+  margin: 0 1.5rem; }
+  .contenedor-redes ul li a {
+    color: white; }
+    .contenedor-redes ul li a:hover {
+      color: black; }
+
+.div-contacto {
+  margin-top: 1rem; }
+  .div-contacto h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    font-weight: bolder; }
