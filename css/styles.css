@@ -80,12 +80,6 @@ ol {
   margin: auto;
   font-size: 1.5rem; }
 
-.boton-whatsapp {
-  position: fixed;
-  top: 90%;
-  left: 95%;
-  width: 4.5rem; }
-
 /*reset-css*/
 * {
   margin: 0;
@@ -175,7 +169,7 @@ header li:hover {
   display: grid;
   grid-template-columns: 1fr 1fr; }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1200px) {
   #main-index {
     grid-area: main2;
     display: grid;
@@ -245,7 +239,7 @@ header li:hover {
   .section-aside p {
     padding: 1rem; }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1200px) {
   .section-aside {
     grid-area: aside2;
     display: grid;
@@ -492,7 +486,8 @@ th {
 
 #footer p {
   color: white;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin: 2rem; }
 
 @media screen and (max-width: 1100px) {
   #footer {

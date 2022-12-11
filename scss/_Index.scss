@@ -23,7 +23,7 @@
     grid-template-columns: 1fr 1fr;
 }
 
-@media screen and(max-width: 1250px){
+@media screen and(max-width: 1200px){
     #main-index{
         grid-area: main2;
         display: grid;
@@ -118,7 +118,7 @@
 
 }
 
-@media screen and(max-width: 1250px){
+@media screen and(max-width: 1200px){
     .section-aside{
         grid-area: aside2;
         display: grid;
