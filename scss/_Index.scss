@@ -46,6 +46,7 @@
     background-color: beige;
     border-radius: 2.5rem;
     margin: 1rem;
+    padding-bottom: .5rem;
     img {
         width: 30rem;
         display: flex;
@@ -61,8 +62,16 @@
     }
     button{
         display: flex;
-        margin: auto;
+        margin: 1.5rem auto;
     }
+   
+    a{
+        color: brown;
+        &:hover{
+            color: rgb(170, 6, 6);
+        }
+    }
+    
 }
 
 .section-aside {

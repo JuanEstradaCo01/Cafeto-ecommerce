@@ -141,6 +141,8 @@ header li:hover {
     font-size: 1.2rem;
     margin: 1rem;
     color: white; }
+    .navbar-collapse a:hover {
+      color: black; }
 
 .logo-header {
   height: auto;
@@ -186,7 +188,8 @@ header li:hover {
 .div-contenedor {
   background-color: beige;
   border-radius: 2.5rem;
-  margin: 1rem; }
+  margin: 1rem;
+  padding-bottom: .5rem; }
   .div-contenedor img {
     width: 30rem;
     display: flex; }
@@ -199,7 +202,11 @@ header li:hover {
     padding: 1rem; }
   .div-contenedor button {
     display: flex;
-    margin: auto; }
+    margin: 1.5rem auto; }
+  .div-contenedor a {
+    color: brown; }
+    .div-contenedor a:hover {
+      color: #aa0606; }
 
 .section-aside {
   grid-area: aside;
@@ -378,6 +385,10 @@ input {
   color: white;
   background-color: brown; }
 
+.referencia {
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
 #body-produccion {
   background-image: radial-gradient(white, #e25e05); }
 
@@ -457,6 +468,9 @@ tbody {
 th {
   font-size: 2rem;
   text-align: center; }
+
+#body-carrito {
+  background-image: linear-gradient(to right, #0f3233, #4ca7ca); }
 
 #bg-enlaces-secundarios {
   background-image: linear-gradient(to right, #164c4e, #012f41); }
