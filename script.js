@@ -6,6 +6,7 @@
 //5: APLICARLE EL DESCUENTO AL TOTAL DE LOS PRODUCTOS
 //6: PREGUNTAR SI SE QUIERE SEGUIR COMPRANDO
 
+   
 alert("IMPORTANTE: por cuestiones de disponibilidad solo puedes agregar 5 productos por compra, agradecemos tu comprension")
 
 alert("Ingresa los precios de los productos a comprar")
@@ -41,5 +42,23 @@ let totalCompra = totalDescuento + ivaProductos
 
 alert("El total de su compra mas IVA es de= $" + totalCompra)
 
+let metodoPago = Number(prompt("Ingresa el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta"))
+
+alert("Gracias por su compra")
 
 
+
+
+let seguirComprando = prompt("¿Quieres seguir comprando? \n SI: Para continuar  \n NO: Para cancelar")
+
+
+switch(seguirComprando){
+   case "SI":
+      alert("Nos alegra mucho seguir contigo");
+      break
+   case "NO":
+      alert("Hasta pronto")
+      break;
+   default:
+      alert("Error: Ingresa una respuesta valida")    
+}
