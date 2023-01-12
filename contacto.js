@@ -21,14 +21,14 @@ if(edad == ""){
     alert("No ingresaste tu edad")
 }
 else if(edad >= 18){
-    alert("¡Felicidades! Cumples con los requisitos minimos, continua diligenciando el formulario.")
+    alert("¡Felicidades! Cumples con los requisitos minimos, continua diligenciando el siguiente formulario.")
 }
 else if(edad < 18){
-    alert("No eres mayor de edad")
+    alert("No cumples con el requisito")
 }
 else if(edad !== 18){
     alert("Error: Ingresa el valor en numeros")
 }
 else{
-    alert("Eres menor de edad")
+    alert("Sigue intentando")
 }

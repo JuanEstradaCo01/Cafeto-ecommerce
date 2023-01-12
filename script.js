@@ -1,12 +1,12 @@
 //OBJETIVOS:
 //1: CALCULAR EL TOTAL DE LOS PRODUCTOS
-//2: CALCULARLE EL IVA AL TOTAL
-//3: MOSTRAR CON ALERT EL TOTAL DEL IVA A PARTE DEL TOTAL DE LOS PRODUCTOS
-//4: SACAR EL TOTAL DEFINITIVO DE LOS PRODUCTOS CON EL IVA INCLUIDO Y MOSTRARLO
-//5: APLICARLE EL DESCUENTO AL TOTAL DE LOS PRODUCTOS
-//6: PREGUNTAR SI SE QUIERE SEGUIR COMPRANDO
+//2: APLICARLE EL DESCUENTO AL TOTAL DE LOS PRODUCTOS Y SUMARLE EL IVA
+//3: PREGUNTAR SI SE QUIERE SEGUIR COMPRANDO
 
-   
+
+let seguirComprando = 0;
+do{
+
 alert("IMPORTANTE: por cuestiones de disponibilidad solo puedes agregar 5 productos por compra, agradecemos tu comprension")
 
 alert("Ingresa los precios de los productos a comprar")
@@ -14,8 +14,6 @@ alert("Ingresa los precios de los productos a comprar")
 function sumarTotal(produc1=0, produc2=0, produc3=0, produc4=0, produc5=0){
    return produc1 + produc2 + produc3 + produc4 + produc5
 }
-
-const iva = totalSinIva => totalSinIva * 0.19
 
 let producto1 = Number(prompt("1er Producto"))
 let producto2 = Number(prompt("2do Producto"))
@@ -26,39 +24,37 @@ let producto5 = Number(prompt("5to Producto"))
 
 let totalProductos = sumarTotal(producto1,producto2,producto3,producto4,producto5)
 
-alert("El total de los productos sin el IVA es de= $" + totalProductos)
-
 let descuento = totalProductos * 0.20
 
 let totalDescuento = totalProductos - descuento
 
-alert("Obtienes un descuento del 20%, su monto total es de= $" + totalDescuento)
+alert("Obtienes un descuento del 20%, su monto total es de: $" + totalDescuento)
 
-let ivaProductos = iva(totalDescuento)
+let productosConIva = totalDescuento * 1.19
 
-alert("El IVA total de la compra es de = $" + ivaProductos)
+alert("El total de su compra con IVA es de: $" + productosConIva)
 
-let totalCompra = totalDescuento + ivaProductos
+let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
 
-alert("El total de su compra mas IVA es de= $" + totalCompra)
-
-let metodoPago = Number(prompt("Ingresa el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta"))
-
-alert("Gracias por su compra")
-
-
-
-
-let seguirComprando = prompt("¿Quieres seguir comprando? \n SI: Para continuar  \n NO: Para cancelar")
-
-
-switch(seguirComprando){
-   case "SI":
-      alert("Nos alegra mucho seguir contigo");
-      break
-   case "NO":
-      alert("Hasta pronto")
-      break;
-   default:
-      alert("Error: Ingresa una respuesta valida")    
+while(metodoPago != "ESC"){
+   switch(metodoPago){
+      case "1":
+         alert("Seleccionaste efectivo")
+         alert("¡Gracias por tu compra!")
+         break;
+      case "2":
+         alert("Seleccionaste tarjeta")
+         alert("¡Gracias por tu compra!")
+         break;
+      default:
+         prompt("Error: Valor invalido, vuelve a intentarlo (Ingresa ESC para salir)").toUpperCase()
+         break;
+   }
+   break;
 }
+
+seguirComprando = prompt("¿Quieres seguir comprando? \n 1: Para continuar  \n No: Para cancelar")
+
+}while(parseInt(seguirComprando))
+
+alert("¡Hasta pronto!")
