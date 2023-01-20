@@ -65,23 +65,23 @@ alert("Los productos que agregaste a tu carrito de compras: " + nombresProductos
 let filtrar = prompt("Para filtrar el contenido de tu carrito de compras ingresa: \n 1) Para filtrar por nombres. \n 2) Para filtrar por referencia.  \n 3) Para filtrar por precio.  \n 4) Para filtrar por tamaño.")
 
 
-const nombreFiltrar = arrayProductos.filter((Producto) => Producto.nombre.includes("CAFE"))
-
 switch(filtrar){
-   case"1":
+   case "1":
       const nombreFiltrar = arrayProductos.filter((Producto) => Producto.nombre.includes("CAFE"))
       console.log("Productos: " + nombreFiltrar)
       break;
-   case"2":
+   case "2":
       const referenciaFiltrar = arrayProductos.filter((Producto) => Producto.referencia <= 300)
       console.log("Referencias: " + referenciaFiltrar)
-   case"3":
+      break;
+   case "3":
       const precioFiltrar = arrayProductos.filter((Producto) => Producto.totalCompra <= 100)
       console.log("Precios: " + precioFiltrar)
       break;
    case "4":
-      const tamanofiltrar = arrayProductos.filter((Producto) => Producto.tamaño)
+      const tamanofiltrar = arrayProductos.filter((Producto) => Producto.tamaño <= 150)
       console.log("Tamaños: " + tamanofiltrar)
+      break;
    default:
       alert("Error: Valor invalido.")
       break;
