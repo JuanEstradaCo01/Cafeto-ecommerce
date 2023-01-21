@@ -62,25 +62,50 @@ const nombresProductosSeleccionados = arrayProductos.map((Producto) => Producto.
 
 alert("Los productos que agregaste a tu carrito de compras: " + nombresProductosSeleccionados)
 
-let filtrar = prompt("Para filtrar el contenido de tu carrito de compras ingresa: \n 1) Para filtrar por nombres. \n 2) Para filtrar por referencia.  \n 3) Para filtrar por precio.  \n 4) Para filtrar por tamaño.")
+let filtrar = prompt("Para filtrar el contenido de tu carrito de compras ingresa: \n 1) Para filtrar por nombres que contengan CAFE. \n 2) Para filtrar por referencia menor a 300.  \n 3) Para filtrar por precio mayor 1000.  \n 4) Para filtrar por tamaño menor a 150.")
 
+let nombres = "";
 
 switch(filtrar){
-   case "1":
-      const nombreFiltrar = arrayProductos.filter((Producto) => Producto.nombre.includes("CAFE"))
-      console.log("Productos: " + nombreFiltrar)
+   case "1":      
+      arrayProductos.filter((itemProd) => {      
+         if(nombres == "" && itemProd.nombre.includes("CAFE")) {
+            nombres = nombres.concat(itemProd.nombre);
+         }else if(itemProd.nombre.includes("CAFE")){
+            nombres = nombres.concat(", " + itemProd.nombre);
+         }
+       });
+      console.log("Productos: " + nombres);
       break;
-   case "2":
-      const referenciaFiltrar = arrayProductos.filter((Producto) => Producto.referencia <= 300)
-      console.log("Referencias: " + referenciaFiltrar)
+   case "2":      
+      arrayProductos.filter((itemProd) => {      
+         if(nombres == "" && itemProd.referencia <= 300 ) {
+            nombres = nombres.concat(itemProd.referencia);
+         }else if(itemProd.referencia <= 300){
+            nombres = nombres.concat(", " + itemProd.referencia);
+         }
+       });
+      console.log("Referencias: " + nombres)
       break;
    case "3":
-      const precioFiltrar = arrayProductos.filter((Producto) => Producto.totalCompra <= 100)
-      console.log("Precios: " + precioFiltrar)
+      arrayProductos.filter((itemProd) => {      
+         if(nombres == "" && itemProd.precio <= 1000 ) {
+            nombres = nombres.concat(itemProd.precio);
+         }else if(itemProd.precio <= 1000){
+            nombres = nombres.concat(", " + itemProd.precio);
+         }
+       });
+      console.log("Precios: " + nombres)
       break;
    case "4":
-      const tamanofiltrar = arrayProductos.filter((Producto) => Producto.tamaño <= 150)
-      console.log("Tamaños: " + tamanofiltrar)
+      arrayProductos.filter((itemProd) => {      
+         if(nombres == "" && itemProd.tamaño <= 150 ) {
+            nombres = nombres.concat(itemProd.tamaño);
+         }else if(itemProd.tamaño <= 1000){
+            nombres = nombres.concat(", " + itemProd.tamaño);
+         }
+       });
+      console.log("Tamaños: " + nombres)
       break;
    default:
       alert("Error: Valor invalido.")
