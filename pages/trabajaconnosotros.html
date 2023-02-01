@@ -20,7 +20,6 @@
     <!--Bootstrap-(CDN)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../contacto.js"></script>
     <link rel="shortcut icon" href="../Imagenes/Logo-cafe.jpg">
     <title>El Caféto | Convocatoria</title>
 </head>
@@ -74,50 +73,50 @@
                     <div class="contenedor-labels-inputs">
                         <div class="contenedor-label-input">
                             <label for="nombre">Nombres:</label>
-                            <input type="text" id="nombre" placeholder="Nombres" required>
+                            <input type="text" id="nombre" value="" placeholder="Nombres" required>
                         </div>
     
                         <div>
                             <label for="apellido">Apellidos:</label>
-                            <input type="text" id="apellido" placeholder="Apellidos">
+                            <input type="text" id="apellido" value="" placeholder="Apellidos">
                         </div>
     
                         <div>
                             <label for="numero">Numero de contacto:</label>
-                            <input type="tel" id="numero" placeholder="Ingresa tu numero" required>
+                            <input type="number" id="numero" placeholder="Ingresa tu numero" value="" required>
                         </div>
     
                         <div>
                             <label for="correo">Correo electronico:</label>
-                            <input type="email" id="correo" placeholder="Ingresa una direccion" required>
+                            <input type="email" id="correo" placeholder="Ingresa una direccion" value="" required>
                         </div>
     
                         <div>
                             <label for="residencia">Ciudad de residencia:</label>
-                            <input type="text" id="residencia" placeholder="Ciudad de residencia">
+                            <input type="text" id="residencia" value="" placeholder="Ciudad de residencia">
                         </div>
     
                         <div>
                             <label for="fecha">Fecha de nacimiento</label>
-                            <input type="date" id="fecha" required>
+                            <input type="date" id="fecha" value="" required>
                         </div>
     
                         <div>
-                            <label for="experiencia">Experiencia laboral:</label>
-                            <input type="text" id="experiencia" placeholder="Experiencia laboral" required>
+                            <label for="experiencia">Experiencia laboral:(meses)</label>
+                            <input type="text" id="experiencia" placeholder="Experiencia laboral" value="" required>
                         </div>
             
-                        <div>
+                        <!--<div>
                             <p>Sexo:</p>
     
-                            <div class="contenedor-radios">
+                            <div id="sexo" class="contenedor-radios">
                                 <label for="masculino">Masculino</label>
-                                <input type="radio" name="tipo" id="masculino" required>
+                                <input type="radio" name="tipo" id="masculino" value="" required>
         
                                 <label for="Femenino">Femenino</label>
-                                <input type="radio" name="tipo" id="Femenino" required>
+                                <input type="radio" name="tipo" id="Femenino" value="" required>
                             </div>
-                        </div>
+                        </div>-->
             
                         <div>
                             <label for="Estado">Estado civil:</label>
@@ -132,10 +131,10 @@
     
                         <div>
                             <p>Hablanos de ti:</p>
-                            <textarea cols="20" rows="5" maxlength="250"></textarea>
+                            <textarea cols="20" rows="5" maxlength="250" id="sobreti"></textarea>
                         </div>
 
-                        <button type="button" class="btn btn-primary mb-5">Enviar</button>
+                        <button type="submit" class="btn btn-primary mb-5" value="enviar">Enviar</button>
                     </div>
 
                 </fieldset>
@@ -176,5 +175,6 @@
 
     <!--script-de-bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="../contacto.js"></script>
 </body>
 </html>

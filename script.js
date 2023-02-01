@@ -68,7 +68,7 @@ let nombres = "";
 
 switch(filtrar){
    case "1":      
-      arrayProductos.filter((itemProd) => {      
+      arrayProductos.filter((itemProd) => {
          if(nombres == "" && itemProd.nombre.includes("CAFE")) {
             nombres = nombres.concat(itemProd.nombre);
          }else if(itemProd.nombre.includes("CAFE")){
@@ -78,7 +78,7 @@ switch(filtrar){
       console.log("Productos: " + nombres);
       break;
    case "2":      
-      arrayProductos.filter((itemProd) => {      
+      arrayProductos.filter((itemProd) => {
          if(nombres == "" && itemProd.referencia <= 300 ) {
             nombres = nombres.concat(itemProd.referencia);
          }else if(itemProd.referencia <= 300){
@@ -88,7 +88,7 @@ switch(filtrar){
       console.log("Referencias: " + nombres)
       break;
    case "3":
-      arrayProductos.filter((itemProd) => {      
+      arrayProductos.filter((itemProd) => {
          if(nombres == "" && itemProd.precio <= 1000 ) {
             nombres = nombres.concat(itemProd.precio);
          }else if(itemProd.precio <= 1000){
@@ -98,7 +98,7 @@ switch(filtrar){
       console.log("Precios: " + nombres)
       break;
    case "4":
-      arrayProductos.filter((itemProd) => {      
+      arrayProductos.filter((itemProd) => {
          if(nombres == "" && itemProd.tamaño <= 150 ) {
             nombres = nombres.concat(itemProd.tamaño);
          }else if(itemProd.tamaño <= 1000){
