@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!--Bootstrap-(CDN)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../Imagenes/Logo-cafe.jpg">
     <title>El Caféto | Tienda</title>
@@ -60,7 +62,7 @@
     </header>
    
 
-    <main class="wow animate__animated animate__backInLeft">
+    <main id="contenedorCards" class="wow animate__animated animate__backInLeft">
 
         <hr>
         <h2>Nuestros productos:</h2>
@@ -85,7 +87,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$8</del></strong><strong>- Ahora:$6.4</strong></p>
                         <p class="referencia">ID: 201</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="201" class="card-boton">Añadir al carrito</button>
         
                     </div>
         
@@ -99,7 +101,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$15</del></strong><strong>- Ahora:$12</strong></p>
                         <p class="referencia">ID: 202</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="202" class="card-boton">Añadir al carrito</button>
         
                     </div>
                     
@@ -113,7 +115,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$20</del></strong><strong>- Ahora:$16</strong></p>
                         <p class="referencia">ID: 203</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="203" class="card-boton">Añadir al carrito</button>
         
                     </div>
 
@@ -127,7 +129,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$3</del></strong><strong>- Ahora:$2.4</strong></p>
                         <p class="referencia">ID: 204</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="204" class="card-boton">Añadir al carrito</button>
         
                     </div>
 
@@ -141,7 +143,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$5</del></strong><strong>- Ahora:$4</strong></p>
                         <p class="referencia">ID: 205</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="205" class="card-boton">Añadir al carrito</button>
         
                     </div>
 
@@ -155,7 +157,7 @@
                         <p class="card__precio"> <strong>Antes:<del>$9</del></strong><strong>- Ahora:$7.2</strong></p>
                         <p class="referencia">ID: 206</p>
             
-                        <button class="card-boton-nuevo">Añadir al carrito</button>
+                        <button id="206" class="card-boton">Añadir al carrito</button>
         
                     </div>
                 </div>
@@ -174,7 +176,7 @@
                 <p class="card__precio"> <strong>Antes:<del>$10</del></strong><strong>- Ahora:$8</strong></p>
                 <p class="referencia">ID: 207</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="207" class="card-boton">Añadir al carrito</button>
 
             </div>
     
@@ -187,7 +189,7 @@
                 <p class="card__precio"> <strong>Antes:<del>$20</del></strong><strong>- Ahora:$16</strong></p>
                 <p class="referencia">ID: 208</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="208" class="card-boton">Añadir al carrito</button>
             </div>
     
             <div id="209" class="card">
@@ -199,7 +201,7 @@
                 <p class="card__precio"> <strong>Antes:<del> $30</del></strong><strong>- Ahora:$24</strong></p>
                 <p class="referencia">ID: 209</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="209" class="card-boton">Añadir al carrito</button>
             </div>
     
             <div id="210" class="card">
@@ -211,7 +213,7 @@
                 <p class="card__precio"> <strong>Antes:<del>$15</del></strong><strong>- Ahora:$12</strong></p>
                 <p class="referencia">ID: 210</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="210" class="card-boton">Añadir al carrito</button>
             </div>
     
             <div id="211" class="card">
@@ -223,7 +225,7 @@
                 <p class="card__precio"> <strong>Antes:<del>$30</del></strong><strong>- Ahora:$24</strong></p>
                 <p class="referencia">ID: 211</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="211" class="card-boton">Añadir al carrito</button>
             </div>
     
             <div id="212" class="card">
@@ -235,7 +237,7 @@
                 <p class="card__precio"> <strong>Antes:<del>$45</del></strong><strong>- Ahora:$36</strong></p>
                 <p class="referencia">ID: 212</p>
     
-                <button class="card-boton">Añadir al carrito</button>
+                <button id="212" class="card-boton">Añadir al carrito</button>
             </div>
     
         </section> 
@@ -276,6 +278,12 @@
 
     <!--script-de-bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <!--Script toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../productos.js"></script>
+    <script src="../app.js"></script>
+    
 
 </body>
 </html>

@@ -57,5 +57,8 @@ formulario.addEventListener("submit", (e) => {
     console.log("nacimiento: " + fecha.value)
     console.log("Experiencia: " + experiencia.value + " meses")
     console.log("Estado civil: " + estado.value)
-    console.log("Descripcion: " + sobreti.value)
+    console.log("Descripcion del aspirante: " + sobreti.value)
 })
+
+
+
