@@ -1,6 +1,3 @@
-//OBJETIVOS:
-//1: Pedir nombre
-//2: Pedir edad y validar
 /*
 alert("Ingresaste a nuestra seccion de contacto, responde a las siguientes preguntas:")
 
@@ -31,7 +28,13 @@ else if(edad !== 18){
 }
 else{
     alert("Sigue intentando")
-}*/
+}
+
+
+------------------------------------------------------------------------------------------------------------------*/
+
+
+//Almacenando todos los datos que se ingresan en el formulario:
 
 const formulario = document.getElementById("form")
 

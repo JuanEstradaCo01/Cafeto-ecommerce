@@ -1,5 +1,6 @@
 
 
+//Constructor:
 
 class Producto {
    constructor(nombre,referencia,precio,tamaño){
@@ -11,9 +12,6 @@ class Producto {
       this.compraSinIva = Number(this.precio - this.descuento)
       this.Iva = Number(this.precio * 0.19)
       this.totalCompra = Number(this.compraSinIva + this.Iva)
-   }
-   sumarIva(){
-      this.precio *= 1.19
    }
 }
 
