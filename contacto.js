@@ -34,7 +34,7 @@ else{
 ------------------------------------------------------------------------------------------------------------------*/
 
 
-//Almacenando todos los datos que se ingresan en el formulario:
+//Almacenando todos los datos que se ingresan en el formulario de convocatoria:
 
 const formulario = document.getElementById("form")
 
@@ -62,6 +62,5 @@ formulario.addEventListener("submit", (e) => {
     console.log("Estado civil: " + estado.value)
     console.log("Descripcion del aspirante: " + sobreti.value)
 })
-
 
 

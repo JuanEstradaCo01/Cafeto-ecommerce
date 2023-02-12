@@ -80,6 +80,11 @@ ol {
   margin: auto;
   font-size: 1.5rem; }
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /*reset-css*/
 * {
   margin: 0;
@@ -469,7 +474,7 @@ th {
   font-size: 2rem;
   text-align: center; }
 
-#body-carrito {
+#bodyCarrito {
   background-image: linear-gradient(to right, #0f3233, #4ca7ca); }
 
 #bg-enlaces-secundarios {

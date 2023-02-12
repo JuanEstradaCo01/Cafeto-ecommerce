@@ -4,7 +4,7 @@
 
 class Producto {
    constructor(nombre,referencia,precio,tamaño){
-      this.nombre = nombre.toUpperCase()
+      this.nombre = Number(nombre)
       this.referencia = Number(referencia)
       this.precio = Number(precio)
       this.tamaño = Number(tamaño)
@@ -21,25 +21,48 @@ let seguirComprando = 0;
 const arrayProductos = []
 
 
-alert("¡Bienvenido a la seccion de compras!")
-alert("Recomendacion abrir la consola antes para visualizar los datos")
+//agregando elementos al HTML:
+let bienvenidos = document.createElement("h2")
+bienvenidos.innerHTML = "¡Bienvenido a la seccion de compras!"
+document.body.appendChild(bienvenidos)
 
+
+
+//eliminando titulo anterior:
+let titulo = document.getElementById ("carritoh2")
+titulo.remove()
+
+
+//Modificando los prompts y alerts: (en proceso)
 do{
 
-let agregando  = "Fin"
-do{
-   let agregando = prompt ("Ingresa el nombre del producto o ingresa Fin para terminar de agregar")
-   if(agregando === "FIN" || agregando === "Fin" || agregando === "fin"){
-      break;
-   }else{
+//let agregando  = "Fin"
+//do{
+   let agregando = document.createElement("h3")//prompt ("Ingresa el nombre del producto o ingresa Fin para terminar de agregar")
+   agregando.innerHTML = "Ingresa el nombre del producto o ingresa Fin para terminar de agregar"
+   document.body.appendChild(agregando)
+
+   //if(agregando === "FIN" || agregando === "Fin" || agregando === "fin"){
+     // break;
+   //}else{
       productoNombre = agregando
-      let producReferencia = (prompt("Ingrese la referencia del producto"))
-      let producPrecio = (prompt("Ingrese el precio del producto"))
-      let producTamaño = (prompt("Ingrese el tamaño o la cantidad del producto"))
+      let producId = document.getElementById("carritoId").value
       
-      arrayProductos.push(new Producto (productoNombre,producReferencia,producPrecio,producTamaño))
-   }
-}while(agregando === "FIN" || agregando === "Fin" || agregando === "fin")
+      let producPrecio = document.getElementById("carritoPrecio").value
+
+      let producTamaño = document.getElementById("carritoTamaño").value
+
+
+      //let producReferencia = (prompt("Ingrese la referencia del producto"))
+     
+     // let producPrecio = (prompt("Ingrese el precio del producto"))
+    
+      //let producTamaño = (prompt("Ingrese el tamaño o la cantidad del producto"))
+      
+      
+      arrayProductos.push(new Producto (productoNombre,producId,producPrecio,producTamaño))
+   //}
+//}while(agregando === "FIN" || agregando === "Fin" || agregando === "fin")
 
 
 console.log(arrayProductos)
@@ -113,6 +136,8 @@ switch(filtrar){
 let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
 
 
+
+
 while(metodoPago != "ESC"){
    switch(metodoPago){
       case "1":
@@ -133,7 +158,7 @@ while(metodoPago != "ESC"){
 seguirComprando = prompt("¿Quieres seguir comprando? \n 1: Para continuar  \n No: Para cancelar")
 
 }while(parseInt(seguirComprando))
-
+/*
 alert("Antes de irte te dejamos con una breve encuesta de tu experiencia con nosotros")
 
 function encuesta(satisfaccion=0,calidad=0){
@@ -151,4 +176,6 @@ console.log("Calificacion satisfaccion/calidad: " + resultadoEncuesta + "/10")
 
 console.log("Comentarios: " + comentario)
 
-alert("Muchas gracias ¡Hasta pronto!")
+alert("Muchas gracias ¡Hasta pronto!")*/
+
+

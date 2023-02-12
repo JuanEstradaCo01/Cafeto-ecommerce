@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="../Imagenes/Logo-cafe.jpg">
     <title>El Caféto | Carrito de compras</title>
 </head>
-<body>
+<body id="bodyCarrito">
     <header id="header">
         <nav class="navbar navbar-expand-lg w-100">
             <div class="container-fluid">
@@ -32,6 +32,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+                        <li class="login">
+                            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
@@ -57,13 +60,20 @@
     </header>
 
     <main id="body-carrito">
-        <h2>Tu carrito de compras:</h2>
+        <h2 id="carritoh2">Tu carrito de compras:</h2>
+        <form id="formCarrito">
+            <input id="carritoId" type="text" placeholder="Referencia">
+            <input id="carritoPrecio" type="text" placeholder="Precio">
+            <input id="carritoTamaño" type="text" placeholder="Tamaño o cantidad">
+            <input type="submit">
+        </form>
+
 
         
 
     </main>
 
-    <footer id="footer">
+    <!--<footer id="footer">
         <img src="../Imagenes/logo-cafeto.png" alt="Logo" class="logo"> 
         <div>
             <p>Sitio desarrollado en el curso de desarrollo web en Coderhouse</p>
@@ -85,8 +95,7 @@
             <p>Tratamiento de datos personales</p>
             <p>Todos los derechos reservados</p>
         </div>
-    </footer>
-    <script src="../script.js"></script>
-    <script src="../productos.js"></script>
+    </footer>-->
+    <script src="../carrito.js"></script>
 </body>
 </html>
