@@ -10,7 +10,12 @@
     }
  }
 
- const arrayUsuarios =[]
+ const arrayUsuarios =[
+    {
+        usuario: "pedro",
+        contrasena : 1234
+    }
+ ]
 
 //Login:
 
