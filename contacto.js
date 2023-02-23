@@ -63,4 +63,3 @@ formulario.addEventListener("submit", (e) => {
     console.log("Descripcion del aspirante: " + sobreti.value)
 })
 
-

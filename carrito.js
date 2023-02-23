@@ -39,18 +39,18 @@ do{
 //let agregando  = "Fin"
 //do{
    let agregando = document.createElement("h3")//prompt ("Ingresa el nombre del producto o ingresa Fin para terminar de agregar")
-   agregando.innerHTML = "Ingresa el nombre del producto o ingresa Fin para terminar de agregar"
+   agregando.innerHTML = "Ingresa el nombre del producto"
    document.body.appendChild(agregando)
 
    //if(agregando === "FIN" || agregando === "Fin" || agregando === "fin"){
      // break;
    //}else{
-      productoNombre = agregando
-      let producId = document.getElementById("carritoId").value
+      //productoNombre = agregando
+      //let producId = document.getElementById("carritoId").value
       
-      let producPrecio = document.getElementById("carritoPrecio").value
+      //let producPrecio = document.getElementById("carritoPrecio").value
 
-      let producTamaño = document.getElementById("carritoTamaño").value
+      //let producTamaño = document.getElementById("carritoTamaño").value
 
 
       //let producReferencia = (prompt("Ingrese la referencia del producto"))
@@ -60,14 +60,14 @@ do{
       //let producTamaño = (prompt("Ingrese el tamaño o la cantidad del producto"))
       
       
-      arrayProductos.push(new Producto (productoNombre,producId,producPrecio,producTamaño))
+      //arrayProductos.push(new Producto (productoNombre,producId,producPrecio,producTamaño))
    //}
 //}while(agregando === "FIN" || agregando === "Fin" || agregando === "fin")
 
 
-console.log(arrayProductos)
+//console.log(arrayProductos)
 
-for(let producto of arrayProductos){
+/*for(let producto of arrayProductos){
 
    console.log("Referencia: " + producto.referencia)
    console.log("Nombre: " + producto.nombre)
@@ -77,7 +77,7 @@ for(let producto of arrayProductos){
    alert("¡Felicidades! Obtuviste el 20% de descuento de tu compra")
 
    alert("El total de tu compra con IVA es de: $" + producto.totalCompra)
-}
+}*/
 
 const nombresProductosSeleccionados = arrayProductos.map((Producto) => Producto.nombre.toUpperCase())
 
@@ -85,7 +85,7 @@ alert("Los productos que agregaste a tu carrito de compras: " + nombresProductos
 
 let filtrar = prompt("Para filtrar el contenido de tu carrito de compras ingresa: \n 1) Para filtrar por nombres que contengan CAFE. \n 2) Para filtrar por referencia menor a 300.  \n 3) Para filtrar por precio mayor 1000.  \n 4) Para filtrar por tamaño menor a 150.")
 
-let nombres = "";
+/*let nombres = "";
 
 switch(filtrar){
    case "1":      
@@ -131,9 +131,9 @@ switch(filtrar){
    default:
       alert("Error: Valor invalido.")
       break;
-}
+}*/
 
-let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
+/*let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
 
 
 
@@ -153,7 +153,7 @@ while(metodoPago != "ESC"){
          break;
    }
    break;
-}
+}*/
 
 seguirComprando = prompt("¿Quieres seguir comprando? \n 1: Para continuar  \n No: Para cancelar")
 

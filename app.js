@@ -1,3 +1,13 @@
+//alerta de bienvenida
+
+swal({
+    title: "Bienvenido a la tienda",
+    text: "Aqui encontraras los productos de la mas alta calidad",
+    icon: "info",
+    button: "Continuar a la tienda"
+})
+
+
 
 //Array de objetos donde almaceno los productos:
 const productosTienda = [
@@ -5,7 +15,7 @@ const productosTienda = [
         id : 201,
         nombre : "Dulce de cafe con leche",
         cantidad : 10 + "unidades",
-        img: `Imagenes/dulce-nuevo.png`,
+        img: '../Imagenes/dulce-nuevo.png',
         precio : 800,
         categoria : "Dulce"
     }
@@ -14,7 +24,7 @@ const productosTienda = [
         id : 202,
         nombre : "Dulce de cafe con leche",
         cantidad : 18 + "unidades",
-        img: `Imagenes/dulce-nuevo.png`,
+        img: `../Imagenes/dulce-nuevo.png`,
         precio : 1500,
         categoria : "Dulce"
 
@@ -24,7 +34,7 @@ const productosTienda = [
         id : 203,
         nombre : "Dulce de cafe con leche",
         cantidad : 25 + "unidades",
-        img: `Imagenes/dulce-nuevo.png`,
+        img: `../Imagenes/dulce-nuevo.png`,
         precio : 2000,
         categoria : "Dulce"
 
@@ -34,7 +44,7 @@ const productosTienda = [
         id : 204,
         nombre : "Galleta con trozos de cafe",
         cantidad : 5 + "unidades",
-        img: `Imagenes/galleta-de-cafe.png`,
+        img: `../Imagenes/galleta-de-cafe.png`,
         precio : 300,
         categoria : "Galleta"
 
@@ -44,7 +54,7 @@ const productosTienda = [
         id : 205,
         nombre : "Galleta con trozos de cafe",
         cantidad : 10 + "unidades",
-        img: `Imagenes/galleta-de-cafe.png`,
+        img: `../Imagenes/galleta-de-cafe.png`,
         precio : 500,
         categoria : "Galleta"
 
@@ -54,7 +64,7 @@ const productosTienda = [
         id : 206,
         nombre : "Galleta con trozos de cafe",
         cantidad : 20 + "unidades",
-        img: `Imagenes/galleta-de-cafe.png`,
+        img: '../Imagenes/galleta-de-cafe.png',
         precio : 900,
         categoria : "Galleta"
 
@@ -64,7 +74,7 @@ const productosTienda = [
         id : 207,
         nombre : "Bolsa de cafe instantaneo",
         cantidad : 50 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 1000,
         categoria : "Cafe instantaneo"
     }
@@ -73,7 +83,7 @@ const productosTienda = [
         id : 208,
         nombre : "Bolsa de cafe instantaneo",
         cantidad : 100 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 2000,
         categoria : "Cafe instantaneo"
     }
@@ -82,7 +92,7 @@ const productosTienda = [
         id : 209,
         nombre : "Bolsa de cafe instantaneo",
         cantidad : 150 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 3000,
         categoria : "Cafe instantaneo"
     }
@@ -91,7 +101,7 @@ const productosTienda = [
         id : 210,
         nombre : "Bolsa cafe de filtro",
         cantidad : 50 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 1500,
         categoria : "Cafe de filtro"
     }
@@ -100,7 +110,7 @@ const productosTienda = [
         id : 211,
         nombre : "Bolsa cafe de filtro",
         cantidad : 100 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 3000,
         categoria : "Cafe de filtro"
     }
@@ -109,7 +119,7 @@ const productosTienda = [
         id : 212,
         nombre : "Bolsa cafe de filtro",
         cantidad : 150 + "g",
-        img: `Imagenes/bolsa-cafe-cards.jpg`,
+        img: '../Imagenes/bolsa-cafe-cards.jpg',
         precio : 4500,
         categoria : "Cafe de filtro"
     }
@@ -117,31 +127,29 @@ const productosTienda = [
 ]
 
 
+const contenedorProductos = document.getElementById('contenedorCards')
+
+productosTienda.forEach((producto) => {
+    const div = document.createElement('div')
+    div.classList.add('card')
+    div.innerHTML = `
+    <img class="card__img" src=${producto.img} alt="">
+    <h3 class="card__titulo">${producto.nombre}</h3>
+    <p class="card__descripcion">${producto.cantidad}</p>
+    <p>${producto.categoria}</p>
+    <p class="card__precio">Precio:$ ${producto.precio}</p>
+    <a id="add"><button id="agregar${producto.id}" class="card-boton">Agregar al carrito <i class="fas fa-shopping-cart"></i></button></a>
+    `
+    contenedorProductos.appendChild(div)
+
+    const boton1 = document.getElementById(`agregar${producto.id}`)
 
 
-const productos = () => {
-    const contenedorCards = document.getElementById("contenedorCards")
-
-    productosTienda.forEach((productosTienda) => {
-        const div = document.createElement(`div`)
-        div.classList.add(`cardProducto`)
-        div.innerHTML += `
-            <div class="card cards-nuevas">
-                <img src="${productosTienda.img}" alt="dulce-cafe"
-                class="card__img">
-            
-                <p class="card__titulo"> ${productosTienda.nombre}</    strong> </p>
-                <p class="card__descripcion">${productosTienda.categoria}</p>
-                <p class="card__precio"> $${productosTienda.precio}</p>
-                <p class="referencia">201</p>
-            
-                <button id= "${productosTienda.id}" class="card-boton-nuevo">Añadir al carrito</button>
-        
-            </div>
-        `
-        contenedorCards.appendChild(div)
+    boton1.addEventListener('click', () => {
+        agregarCarrito(producto.id)
     })
-}
+})
+
 
 
 
@@ -149,11 +157,11 @@ const productos = () => {
 
 const carroDeCompras = []
 
-const contenedorCards = document.getElementById(`contenedorCards`)
+/*const contenedorCards = document.getElementById(`contenedorCards`)
 
-contenedorCards.addEventListener(`click`, (e) => {
+    contenedorCards.addEventListener(`click`, (e) => {
     agregarCarrito(e.target.id)
-})
+    })*/
 
 const agregarCarrito = (agregarId) => {
     const agregar1 = productosTienda.find(productosTienda => productosTienda.id == agregarId)
@@ -161,6 +169,25 @@ const agregarCarrito = (agregarId) => {
     console.table(carroDeCompras)
 }
 
+//Eligiendo metodo de pago:
+/*let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
+
+while(metodoPago != "ESC"){
+   switch(metodoPago){
+      case "1":
+         alert("Seleccionaste efectivo")
+         alert("¡Gracias por tu compra!")
+         break;
+      case "2":
+         alert("Seleccionaste tarjeta")
+         alert("¡Gracias por tu compra!")
+         break;
+      default:
+         //prompt("Error: Valor invalido, vuelve a intentarlo (Ingresa ESC para salir)").toUpperCase()
+         break;
+   }
+   break;
+}*/
 
 //Enviar todos los productos al storage:
 const enviarStorage = (clave,valor) => {localStorage.setItem(clave,valor)}
@@ -193,9 +220,9 @@ console.log(traerDeStorage)
 
 
 
-//Aplicando Toastify:(en proceso)
+//Aplicando Toastify:
 /*
-let boton = document.getElementsByClassName("card-boton")
+let boton = document.getElementById("add")
 
 boton.addEventListener("click", agregando)
 
@@ -203,12 +230,12 @@ function agregando(){
 
     Toastify({
         text: "Agregado al carrito",
-        duration: 3000,
+        duration: 2000,
         destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,
         close: true,
-        gravity: "top", 
-        position: "left", 
+        gravity: "bottom", 
+        position: "right", 
         stopOnFocus: true, 
         style: {
           background: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -216,5 +243,5 @@ function agregando(){
         onClick: function(){} 
       }).showToast();
     
-}*/
-
+}
+*/

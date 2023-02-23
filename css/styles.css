@@ -394,6 +394,14 @@ input {
   font-size: 1rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
+.botoncar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #550202;
+  border: #550202; }
+
 #body-produccion {
   background-image: radial-gradient(white, #e25e05); }
 
