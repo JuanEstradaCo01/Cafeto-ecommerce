@@ -1,67 +1,83 @@
 
-
-
-
 //Objeto constructor para los usuarios:
- class Usuarios {
+class Usuarios {
     constructor(usuario,contrasena){
-        this.usuario = Number(usuario)
+        this.usuario = usuario
         this.contrasena = Number(contrasena)
     }
  }
 
- const arrayUsuarios =[
-    {
-        usuario: "pedro",
-        contrasena : 1234
-    }
- ]
+ const arrayUsuarios =[]
 
-//Login:
+//Login: registro
 
 let loginForm = document.getElementById("loginForm")
 
-loginForm.addEventListener("submit", login)
+loginForm.addEventListener("submit", loginRegistro)
 
-function login(e){
+function loginRegistro(e){
     e.preventDefault()
     
     //Traer los datos de los botones
 
     let usuario = e.target
-    //console.log(usuario.children[1].value)
+    //console.log(usuario.children[0].value)
     let contrasena = e.target
-    //console.log(contrasena.children[2].value)
+    //console.log(contrasena.children[1].value)
 
 
     let verificarLoginUsuario = usuario.children[1].value
-    let verificarLoginContrasena = contrasena.children[2].value
+    
+    let verificarLoginContrasena = Number(contrasena.children[2].value)
+    
     
     arrayUsuarios.push(new Usuarios(verificarLoginUsuario,verificarLoginContrasena))
 
-    //Verificando usuario:
-    const usuarioFind = arrayUsuarios.find((Usuarios) => Usuarios.usuario === verificarLoginUsuario.value)
+    
+
+    //traer datos almacenados en el array:
+    
+    const usuarioFind = arrayUsuarios.find((Usuarios) => Usuarios.usuario === verificarLoginUsuario)
     console.log(usuarioFind)
-    const contrasenaFind = arrayUsuarios.find((Usuarios) => Usuarios.contrasena === verificarLoginContrasena.value)
-    console.log(contrasenaFind)
-
-
-    if((usuarioFind === verificarLoginUsuario) && (contrasenaFind === verificarLoginContrasena)){
-        console.log("!Bienvenido¡ " + verificarLoginUsuario) 
-    }else{
-        console.log("Usuario o contraseña incorrectos, intenta de nuevo.")
-    }
-    
-    
-    //Verificando Contraseña:
-
-
-    /*console.log(verificarLoginContrasena)
-    if( contrasenaFind === verificarLoginContrasena){
-        console.log("Contraseña correcta")
-    }else{
-        console.log("Contraseña incorrecta")
-    }*/
+    const contrasenaFind = arrayUsuarios.find((Usuarios) => Usuarios.contrasena === verificarLoginContrasena)
 
 }
+
+
+
+//Login: sign in (Ingresar con un usuario registrado)
+
+let signIn = document.getElementById("loginIngreso")
+
+signIn.addEventListener("submit", loginIngresar)
+
+function loginIngresar(e){
+    e.preventDefault()
+
+    let usuarioIngresar = e.target
+    let contrasenaIngresar = e.target
+
+    let validarUsuario = usuarioIngresar.children[1].value
+ 
+    let validarContrasena = Number(contrasenaIngresar.children[2].value)
+    
+
+    //Validamos si los datos ingresados estan registrados en el array
+    arrayUsuarios.filter((itemProduct) => {
+        if(validarUsuario == itemProduct.usuario && validarContrasena == itemProduct.contrasena){
+            console.log("Bienvenido " + validarUsuario)
+
+        }else{
+            console.log("Usuario o contraseña incorrectos")
+        }   
+        });       
+    }
+
+
+
+    
+    
+
+
+
 

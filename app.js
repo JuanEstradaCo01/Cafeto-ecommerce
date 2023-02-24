@@ -148,20 +148,15 @@ productosTienda.forEach((producto) => {
     boton1.addEventListener('click', () => {
         agregarCarrito(producto.id)
     })
+
+    boton1.addEventListener("click", agregando)
+
 })
-
-
 
 
 //Agregar al carrito:
 
 const carroDeCompras = []
-
-/*const contenedorCards = document.getElementById(`contenedorCards`)
-
-    contenedorCards.addEventListener(`click`, (e) => {
-    agregarCarrito(e.target.id)
-    })*/
 
 const agregarCarrito = (agregarId) => {
     const agregar1 = productosTienda.find(productosTienda => productosTienda.id == agregarId)
@@ -218,13 +213,7 @@ const traerDeStorage = []
 traerDeStorage.push(dato1,dato2,dato3,dato4,dato5,dato6,dato7,dato8,dato9,dato10,dato11,dato12)
 console.log(traerDeStorage)
 
-
-
 //Aplicando Toastify:
-/*
-let boton = document.getElementById("add")
-
-boton.addEventListener("click", agregando)
 
 function agregando(){
 
@@ -238,10 +227,9 @@ function agregando(){
         position: "right", 
         stopOnFocus: true, 
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "radial-gradient( red, black)",
         },
         onClick: function(){} 
       }).showToast();
     
 }
-*/

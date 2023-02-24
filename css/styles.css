@@ -485,6 +485,35 @@ th {
 #bodyCarrito {
   background-image: linear-gradient(to right, #0f3233, #4ca7ca); }
 
+#loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+#loginIngreso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.inputRegistro {
+  border-color: transparent;
+  margin: 1rem; }
+
+.inputs {
+  margin: 1.5rem; }
+
+#mainLogin {
+  background-image: linear-gradient(to right, #3d3c3c, white); }
+
+#boton-carrito {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #boton-carrito:hover {
+    color: black; }
+
 #bg-enlaces-secundarios {
   background-image: linear-gradient(to right, #164c4e, #012f41); }
 
