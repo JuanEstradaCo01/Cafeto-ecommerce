@@ -75,9 +75,4 @@ function loginIngresar(e){
 
 
 
-    
-    
-
-
-
 

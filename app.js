@@ -9,6 +9,47 @@ swal({
 
 
 
+//Consumiendo API jsonplaceholder
+let list = document.getElementById("list")
+
+
+fetch("https://jsonplaceholder.typicode.com/comments")
+.then((resp)=> resp.json())
+.then((data)=> console.log(data)/*{
+    data.forEach( info => {
+        const mostrarDatos = document.createElement("li")
+        mostrarDatos.innerHTML = `
+        <h3>Nombre: ${info.name}</h3>
+        <h3>Email: ${info.email}</h3>
+        <h3>Comentario: ${info.body}</h3>
+        `
+        list.appendChild(mostrarDatos)
+    }*/)
+
+.catch((error)=> console.log("Error",error))
+
+
+//Enviar datos con el metodo post
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'post',
+  body: JSON.stringify({
+    title: 'Hola soy un dato nuevo',
+    body: 'Soy un dato nuevo',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+    .then((resp)=> resp.json())
+    .then((data)=> console.log(data))
+    .catch((error)=> console.log("Error",error))
+
+
+    
+
+
 //Array de objetos donde almaceno los productos:
 const productosTienda = [
     {
@@ -126,7 +167,7 @@ const productosTienda = [
 
 ]
 
-
+//Agregando los productos a la tienda:
 const contenedorProductos = document.getElementById('contenedorCards')
 
 productosTienda.forEach((producto) => {
@@ -227,9 +268,10 @@ function agregando(){
         position: "right", 
         stopOnFocus: true, 
         style: {
-          background: "radial-gradient( red, black)",
+          background: "radial-gradient(rgb(8, 208, 223), black)",
         },
         onClick: function(){} 
       }).showToast();
     
 }
+
