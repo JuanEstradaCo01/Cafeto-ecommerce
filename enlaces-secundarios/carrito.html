@@ -50,9 +50,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/Preparacion.html">Preparaciones</a>
                         </li>
-                        <li id="carritoContador" class="nav-item">
-                            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                        </li>
+                        
+                        <a href="carrito.html"><button id="boton-carrito" class="botoncar"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span></button></a>
                     </ul>
                 </div>
             </div>
@@ -60,18 +59,24 @@
     </header>
 
     <main id="body-carrito">
-        <h2 id="carritoh2">Tu carrito de compras:</h2>
-        <form id="formCarrito">
-            <input id="carritoId" type="text" placeholder="Referencia">
-            <input id="carritoPrecio" type="text" placeholder="Precio">
-            <input id="carritoTamaño" type="text" placeholder="Tamaño o cantidad">
-            <input type="submit">
-        </form>
-
-
-        
-
+        <div class="modal-contenedor">
+            <div class="modal-carrito">
+                <h3>Carrito</h3>
+                <!--<button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>-->
+                <div id="productoEnCarrito">
+                    <!--<p>${producto.nombre}</p>
+                    <p>Precio: ${producto.precio}</p>
+                    <p>Cantidad: <span id="cantidad">${producto.cantidad}</span></p>
+                    <button onclick = "eliminarDelCarro(${producto.id})" class = "botonEliminar"><i class = "fas fa-trash-alt</button>-->
+                </div>
+            
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            </div>
+        </div>
     </main>
+
+    
 
     <!--<footer id="footer">
         <img src="../Imagenes/logo-cafeto.png" alt="Logo" class="logo"> 
@@ -96,6 +101,6 @@
             <p>Todos los derechos reservados</p>
         </div>
     </footer>-->
-    <script src="../carrito.js"></script>
+    <script src="../app.js"></script>
 </body>
 </html>

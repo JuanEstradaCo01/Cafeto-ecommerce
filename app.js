@@ -1,51 +1,11 @@
 //alerta de bienvenida
 
-swal({
+/*swal({
     title: "Bienvenido a la tienda",
     text: "Aqui encontraras los productos de la mas alta calidad",
     icon: "info",
     button: "Continuar a la tienda"
-})
-
-
-
-//Consumiendo API jsonplaceholder
-let list = document.getElementById("list")
-
-
-fetch("https://jsonplaceholder.typicode.com/comments")
-.then((resp)=> resp.json())
-.then((data)=> console.log(data)/*{
-    data.forEach( info => {
-        const mostrarDatos = document.createElement("li")
-        mostrarDatos.innerHTML = `
-        <h3>Nombre: ${info.name}</h3>
-        <h3>Email: ${info.email}</h3>
-        <h3>Comentario: ${info.body}</h3>
-        `
-        list.appendChild(mostrarDatos)
-    }*/)
-
-.catch((error)=> console.log("Error",error))
-
-
-//Enviar datos con el metodo post
-
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'post',
-  body: JSON.stringify({
-    title: 'Hola soy un dato nuevo',
-    body: 'Soy un dato nuevo',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-    .then((resp)=> resp.json())
-    .then((data)=> console.log(data))
-    .catch((error)=> console.log("Error",error))
-
+})*/
 
     
 
@@ -170,6 +130,8 @@ const productosTienda = [
 //Agregando los productos a la tienda:
 const contenedorProductos = document.getElementById('contenedorCards')
 
+const contenedorCarrito = document.getElementById('productoEnCarrito')
+
 productosTienda.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('card')
@@ -202,28 +164,28 @@ const carroDeCompras = []
 const agregarCarrito = (agregarId) => {
     const agregar1 = productosTienda.find(productosTienda => productosTienda.id == agregarId)
     carroDeCompras.push(agregar1)
+    actualizarCarrito()
     console.table(carroDeCompras)
 }
 
-//Eligiendo metodo de pago:
-/*let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
 
-while(metodoPago != "ESC"){
-   switch(metodoPago){
-      case "1":
-         alert("Seleccionaste efectivo")
-         alert("¡Gracias por tu compra!")
-         break;
-      case "2":
-         alert("Seleccionaste tarjeta")
-         alert("¡Gracias por tu compra!")
-         break;
-      default:
-         //prompt("Error: Valor invalido, vuelve a intentarlo (Ingresa ESC para salir)").toUpperCase()
-         break;
-   }
-   break;
-}*/
+//Actualizando el carrito con los productos que se le agregan:
+
+const actualizarCarrito = () => {
+
+    carroDeCompras.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio: ${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick ="eliminarDelCarro(${prod.id})" class = "botonEliminar"><i class="fas fa-trash-alt"</button>
+        `
+
+        contenedorCarrito.appendChild(div)
+    })
+}
 
 //Enviar todos los productos al storage:
 const enviarStorage = (clave,valor) => {localStorage.setItem(clave,valor)}
@@ -274,4 +236,3 @@ function agregando(){
       }).showToast();
     
 }
-

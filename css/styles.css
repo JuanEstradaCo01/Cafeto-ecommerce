@@ -341,7 +341,7 @@ input {
 .h2-nuevos-productos {
   display: flex; }
 
-.padre-cards-nuevas {
+#contenedorCards {
   grid-area: main;
   display: grid;
   margin: auto 3rem;
@@ -349,12 +349,12 @@ input {
   grid-template-columns: 1fr 1fr 1fr; }
 
 @media screen and (max-width: 1100px) {
-  .padre-cards-nuevas {
+  #contenedorCards {
     grid-template-columns: 1fr 1fr;
     align-items: center; } }
 
 @media screen and (max-width: 715px) {
-  .padre-cards-nuevas {
+  #contenedorCards {
     grid-template-columns: 1fr;
     align-items: center; } }
 
@@ -401,6 +401,18 @@ input {
   color: white;
   background-color: #550202;
   border: #550202; }
+
+.productoEnCarrito {
+  color: grey;
+  background-color: black;
+  font-style: initial; }
+
+.modal-carrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: linear-gradient(to right, #ee2424, white); }
 
 #body-produccion {
   background-image: radial-gradient(white, #e25e05); }

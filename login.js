@@ -73,6 +73,34 @@ function loginIngresar(e){
         });       
     }
 
+for (let i=0 ; i < 3 ; i++){
+
+    let u = validarUsuario
+    let c = validarContrasena
+
+    if (u == Usuarios.nombre && c == Usuarios.contrasena){
+        console.log()
+    }
+}
 
 
+//Eligiendo metodo de pago:
+/*let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
+
+while(metodoPago != "ESC"){
+   switch(metodoPago){
+      case "1":
+         alert("Seleccionaste efectivo")
+         alert("¡Gracias por tu compra!")
+         break;
+      case "2":
+         alert("Seleccionaste tarjeta")
+         alert("¡Gracias por tu compra!")
+         break;
+      default:
+         //prompt("Error: Valor invalido, vuelve a intentarlo (Ingresa ESC para salir)").toUpperCase()
+         break;
+   }
+   break;
+}*/
 
