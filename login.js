@@ -68,20 +68,47 @@ function loginIngresar(e){
             console.log("Bienvenido " + validarUsuario)
 
         }else{
-            console.log("Usuario o contraseña incorrectos")
+            
         }   
-        });       
-    }
+        });      
+        
+    //Establecer 3 intentos y si falla bloquear:
+    let intentos = 3;
 
-for (let i=0 ; i < 3 ; i++){
+    for (let i=0 ; i < 3 ; i++){
 
     let u = validarUsuario
     let c = validarContrasena
 
-    if (u == Usuarios.nombre && c == Usuarios.contrasena){
-        console.log()
+
+    if( !u || !c){
+        console.log("Ingresa los datos solicitados")
+    }else{
+        arrayUsuarios.filter((itemProduct) => {
+            if(u == itemProduct.usuario && c == itemProduct.contrasena){
+                console.log("Valido")
+            }else{
+                
+                alert("Usuario y/o contraseña incorrectos, Te quedan " + intentos + " intentos")
+            }
+            intentos -- ;
+            
+            }
+            ); 
+    }    
+
+    //Bloquear usuario
+    if (intentos <= 0){
+    console.log("USUARIO BLOQUEADO")
+        }
+
     }
 }
+
+
+
+
+
 
 
 //Eligiendo metodo de pago:
@@ -103,4 +130,3 @@ while(metodoPago != "ESC"){
    }
    break;
 }*/
-

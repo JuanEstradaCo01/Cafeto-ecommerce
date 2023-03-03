@@ -96,15 +96,38 @@
 }
 
 .productoEnCarrito{
-    color: grey;
-    background-color: black;
+    background-color: rgb(114, 46, 46);
     font-style: initial;
+    display: flex;
+    width: 670px;
+    flex-direction: row;
+    width: auto;
+    p{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
 }
 
 .modal-carrito{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    background-image: linear-gradient(to right, rgb(238, 36, 36), white) ;
+    flex-direction: column;
+    background-color: beige;
+    margin: 2rem;
+    border-radius: 1rem;
+    h3{
+        color: rgb(124, 3, 3);
+        font-size: 3rem;
+        font-style: oblique;
+    }
+}
+
+.botonEliminar{
+    margin-right: 1rem;
+    background-color: rgb(252, 249, 249);
+    color: red;
+    border: white;
 }

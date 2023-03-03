@@ -1,4 +1,11 @@
+//alerta de bienvenida
 
+swal("Antes de empezar dinos tu nombre", {
+  content: "input",
+})
+.then((value) => {
+  swal(`¡Hola ${value}!`);
+});
 
 
 
@@ -7,7 +14,7 @@
 fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'post',
   body: JSON.stringify({
-    title: 'Hola soy un dato nuevo',
+    title: 'Hola',
     body: 'Soy un dato nuevo',
     userId: 1,
   }),

@@ -403,16 +403,36 @@ input {
   border: #550202; }
 
 .productoEnCarrito {
-  color: grey;
-  background-color: black;
-  font-style: initial; }
+  background-color: #722e2e;
+  font-style: initial;
+  display: flex;
+  width: 670px;
+  flex-direction: row;
+  width: auto; }
+  .productoEnCarrito p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; }
 
 .modal-carrito {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  background-image: linear-gradient(to right, #ee2424, white); }
+  flex-direction: column;
+  background-color: beige;
+  margin: 2rem;
+  border-radius: 1rem; }
+  .modal-carrito h3 {
+    color: #7c0303;
+    font-size: 3rem;
+    font-style: oblique; }
+
+.botonEliminar {
+  margin-right: 1rem;
+  background-color: #fcf9f9;
+  color: red;
+  border: white; }
 
 #body-produccion {
   background-image: radial-gradient(white, #e25e05); }
