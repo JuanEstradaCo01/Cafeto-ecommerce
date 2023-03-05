@@ -181,7 +181,9 @@ const stringCarrito = localStorage.getItem('carritoCompras');
 
 const pintarItems = (prods,eliminar, sumar) => {
     const contenedorCarrito = document.getElementById('productoEnCarrito');
-
+    let total = 0;
+    let compraFinal = 0;
+    let totalSinIva = 0;
     prods.forEach((prod) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
@@ -195,22 +197,18 @@ const pintarItems = (prods,eliminar, sumar) => {
 
         //Calculo el total de la compra con descuento y le sumo el IVA
         total = total + prod.precio;
-        let totalSinIva = total * 0.19 //IVA
+        totalSinIva = total * 0.19 //IVA
         let descuento = total * 0.20 //Descuento
         let totalCompraConDescuento = total - descuento
-        let compraFinal = totalCompraConDescuento + totalSinIva
-
-        
-
-        
-
-        //Agrego los valores para mostrarlos en pantalla
-        let totalCompras = document.getElementById("precioTotal")
-        totalCompras.innerHTML = compraFinal
-
-        let sinIva = document.getElementById("precioSinIva")
-        sinIva.innerHTML = totalSinIva   
+        compraFinal = totalCompraConDescuento + totalSinIva       
 })
+
+ //Agrego los valores para mostrarlos en pantalla
+ let totalCompras = document.getElementById("precioTotal")
+ totalCompras.innerHTML = compraFinal
+
+ let sinIva = document.getElementById("precioSinIva")
+ sinIva.innerHTML = totalSinIva   
 }
     
 
