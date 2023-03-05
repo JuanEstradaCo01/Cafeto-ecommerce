@@ -15,15 +15,15 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'post',
   body: JSON.stringify({
     title: 'Hola',
-    body: 'Soy un dato nuevo',
+    body: 'Dato',
     userId: 1,
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
-    .then((resp)=> resp.json())
-    .then((data)=> console.log(data))
+    .then((other)=> other.json())
+    .then((another)=> console.log(another))
     .catch((error)=> console.log("Error",error))
 
 

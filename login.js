@@ -68,65 +68,9 @@ function loginIngresar(e){
             console.log("Bienvenido " + validarUsuario)
 
         }else{
-            
+            console.log("Usuario y/o contraseña incorrectos")
         }   
         });      
-        
-    //Establecer 3 intentos y si falla bloquear:
-    let intentos = 3;
-
-    for (let i=0 ; i < 3 ; i++){
-
-    let u = validarUsuario
-    let c = validarContrasena
 
 
-    if( !u || !c){
-        console.log("Ingresa los datos solicitados")
-    }else{
-        arrayUsuarios.filter((itemProduct) => {
-            if(u == itemProduct.usuario && c == itemProduct.contrasena){
-                console.log("Valido")
-            }else{
-                
-                alert("Usuario y/o contraseña incorrectos, Te quedan " + intentos + " intentos")
-            }
-            intentos -- ;
-            
-            }
-            ); 
-    }    
-
-    //Bloquear usuario
-    if (intentos <= 0){
-    console.log("USUARIO BLOQUEADO")
-        }
-
-    }
 }
-
-
-
-
-
-
-
-//Eligiendo metodo de pago:
-/*let metodoPago = prompt("Selecciona el metodo de pago: \n 1-Pago en efectivo  \n 2-Pago con tarjeta")
-
-while(metodoPago != "ESC"){
-   switch(metodoPago){
-      case "1":
-         alert("Seleccionaste efectivo")
-         alert("¡Gracias por tu compra!")
-         break;
-      case "2":
-         alert("Seleccionaste tarjeta")
-         alert("¡Gracias por tu compra!")
-         break;
-      default:
-         //prompt("Error: Valor invalido, vuelve a intentarlo (Ingresa ESC para salir)").toUpperCase()
-         break;
-   }
-   break;
-}*/

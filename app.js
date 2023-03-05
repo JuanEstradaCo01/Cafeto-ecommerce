@@ -176,77 +176,83 @@ const actualizarCarrito = () => {
     let myJsonString = JSON.stringify(carroDeCompras);
     localStorage.setItem('carritoCompras', myJsonString);
 }
-    const stringCarrito = localStorage.getItem('carritoCompras');
-    if(stringCarrito != ''){
-    let jsonArray = JSON.parse(stringCarrito)
+
+const stringCarrito = localStorage.getItem('carritoCompras');
+
+const pintarItems = (prods,eliminar, sumar) => {
     const contenedorCarrito = document.getElementById('productoEnCarrito');
 
-        jsonArray.forEach((prod) => {        
-            const div = document.createElement('div')
-            div.className = ('productoEnCarrito')
-            div.innerHTML = `
-            <p>${prod.nombre}</p>
-            <p>Precio: $${prod.precio}</p>
-            <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-            <button onclick="eliminarDelCarrito${prod.id})" class= "botonEliminar"><i class="fas fa-trash-alt"</button>
-            `
-            contenedorCarrito.appendChild(div)
- 
-            }
-        )
-    }
+    prods.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio: $${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class= "botonEliminar"><i class="fas fa-trash-alt"</button>
+        `
+        contenedorCarrito.appendChild(div)
 
+        //Calculo el total de la compra con descuento y le sumo el IVA
+        total = total + prod.precio;
+        let totalSinIva = total * 0.19 //IVA
+        let descuento = total * 0.20 //Descuento
+        let totalCompraConDescuento = total - descuento
+        let compraFinal = totalCompraConDescuento + totalSinIva
+
+        
+
+        
+
+        //Agrego los valores para mostrarlos en pantalla
+        let totalCompras = document.getElementById("precioTotal")
+        totalCompras.innerHTML = compraFinal
+
+        let sinIva = document.getElementById("precioSinIva")
+        sinIva.innerHTML = totalSinIva   
+})
+}
+    
 
 let total = 0;
-
+let prueba = ''
 if(stringCarrito != ''){
-    let jsonArray = JSON.parse(stringCarrito)
-    const contenedorCarrito = document.getElementById('productoEnCarrito');
+    let jsonArray = JSON.parse(stringCarrito)   
+    prueba = jsonArray
+    pintarItems(jsonArray, "sumar")
+}
 
-        jsonArray.forEach((prod) => {        
-            const div = document.createElement('div')
-            div.className = ('productoEnCarrito')
-            div.innerHTML = `
-            <p>${prod.nombre}</p>
-            <p>Precio: $${prod.precio}</p>
-            <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-            <button onclick="eliminarDelCarrito${prod.id})" class= "botonEliminar"><i class="fas fa-trash-alt"</button>
-            `
-            contenedorCarrito.appendChild(div)
-            
-            //Calculo el total de la compra con descuento y le sumo el IVA
-            total = total + prod.precio;
-            let totalSinIva = total * 0.19 //IVA
-            let descuento = total * 0.20 //Descuento
-            let totalCompraConDescuento = total - descuento
-            let compraFinal = totalCompraConDescuento + totalSinIva
-
-            //Agrego los valores para mostrarlos en pantalla
-            let totalCompras = document.getElementById("precioTotal")
-            totalCompras.innerHTML = compraFinal
-            totalCompras.appendChild(div)
-
-            let sinIva = document.getElementById("precioSinIva")
-            sinIva.innerHTML = totalSinIva
-            sinIva.appendChild(div)
-            }
-        )
-    }
-
-
-/*
-const borrar = document.getElementById("botonEliminar")
-
-borrar.addEventListener("click", eliminarDelCarrito)
 
 const eliminarDelCarrito = (prodId) => {
-    const item = jsonArray.find((prod) => prod.id === prodId)
-
-    const indice = jsonArray.indexOf(item)
-    jsonArray.splice(indice, 1)
+    const item = prueba.find((prod) => prod.id === prodId)
+    const indice = prueba.indexOf(item)
+    prueba.splice(indice, 1)
+    document.getElementById('productoEnCarrito').innerHTML = '';
+    pintarItems(prueba, "eliminar")
 }
-*/
 
+
+//Boton comprar:
+/*let comprar = document.getElementById("comprar")
+comprar.addEventListener("click", gracias)
+
+function gracias(){
+    alert("¡Gracias por tu compra!")
+}*/
+
+//Promesa: 
+let desc = document.getElementById("descuento")
+function obtenerDescuentos(){
+    setTimeout(() => {
+        alert("¡Descuento valido hasta el 30 de Marzo!")
+        /*let dato = document.createElement("h3")
+        dato.innerHTML = "¡Descuento valido hasta el 30 de Marzo!"
+        desc.appendChild(dato)*/
+    
+    },1000);
+}
+
+desc.addEventListener("click", obtenerDescuentos)
 
 
 //Enviar todos los productos al storage:
