@@ -65,12 +65,18 @@ function loginIngresar(e){
     //Validamos si los datos ingresados estan registrados en el array
     arrayUsuarios.filter((itemProduct) => {
         if(validarUsuario == itemProduct.usuario && validarContrasena == itemProduct.contrasena){
-            console.log("Bienvenido " + validarUsuario)
+            swal({
+                title: "¡Bienvenido " + validarUsuario + "!",
+                text: "Iniciaste sesion",
+                icon: "success",
+            })
 
         }else{
-            console.log("Usuario y/o contraseña incorrectos")
+            swal({
+                title: "oops, ha ocurrido un error",
+                text: "Usuario y/o contraseña incorrectos",
+                icon: "error",
+            })
         }   
         });      
-
-
 }
