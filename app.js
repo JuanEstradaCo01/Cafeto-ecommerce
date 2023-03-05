@@ -230,14 +230,6 @@ const eliminarDelCarrito = (prodId) => {
 }
 
 
-//Boton comprar: solo para la pagina del carrito
-let comprar = document.getElementById("comprar")
-comprar.addEventListener("click", gracias)
-
-function gracias(){
-    alert("¡Gracias por tu compra!")
-}
-
 //Promesa: Solo para la pagina de la tienda 
 let desc = document.getElementById("descuento")
 function obtenerDescuentos(){
