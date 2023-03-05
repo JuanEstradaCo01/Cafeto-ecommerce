@@ -1,13 +1,3 @@
-//alerta de bienvenida
-
-/*swal({
-    title: "Bienvenido a la tienda",
-    text: "Aqui encontraras los productos de la mas alta calidad",
-    icon: "info",
-    button: "Continuar a la tienda"
-})*/
-
-    
 
 
 //Array de objetos donde almaceno los productos:
@@ -234,11 +224,12 @@ const eliminarDelCarrito = (prodId) => {
 let desc = document.getElementById("descuento")
 function obtenerDescuentos(){
     setTimeout(() => {
-        alert("¡Descuento valido hasta el 30 de Marzo!")
-        /*let dato = document.createElement("h3")
-        dato.innerHTML = "¡Descuento valido hasta el 30 de Marzo!"
-        desc.appendChild(dato)*/
-    
+        swal({
+            title: "¡Descuento valido solo hasta el 30 de marzo!",
+            text: "Aqui encontraras los productos de la mas alta calidad",
+            icon: "info",
+            button: "Continuar en la tienda"
+        })
     },1000);
 }
 
