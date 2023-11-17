@@ -1,5 +1,5 @@
 
-//Objeto constructor para los usuarios:
+//Class para los usuarios:
 class Usuarios {
     constructor(usuario,contrasena){
         this.usuario = usuario
@@ -7,7 +7,7 @@ class Usuarios {
     }
  }
 
- const arrayUsuarios =[]
+ const arrayUsuarios = []
 
 //Login: registro
 
@@ -25,15 +25,11 @@ function loginRegistro(e){
     let contrasena = e.target
     //console.log(contrasena.children[1].value)
 
-
     let verificarLoginUsuario = usuario.children[1].value
     
     let verificarLoginContrasena = Number(contrasena.children[2].value)
     
-    
     arrayUsuarios.push(new Usuarios(verificarLoginUsuario,verificarLoginContrasena))
-
-    
 
     //traer datos almacenados en el array:
     

@@ -1,6 +1,4 @@
-
-
-//Array de objetos donde almaceno los productos:
+//Productos:
 const productosTienda = [
     {
         id : 201,
@@ -225,7 +223,7 @@ let desc = document.getElementById("descuento")
 function obtenerDescuentos(){
     setTimeout(() => {
         swal({
-            title: "¡Descuento valido solo hasta el 30 de marzo!",
+            title: "¡Descuento valido solo hasta fin de mes!",
             text: "Aqui encontraras los productos de la mas alta calidad",
             icon: "info",
             button: "Continuar en la tienda"
